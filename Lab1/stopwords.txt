@@ -194,3 +194,7 @@ nothing
 something
 gutenberg
 project
+’
+—
+“
+”
