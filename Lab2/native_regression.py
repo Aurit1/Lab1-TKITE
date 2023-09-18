@@ -1,8 +1,11 @@
 from matrix import *
 import matplotlib.pyplot as plt
+import sys
 
-X = transpose(loadtxt('chirps.txt'))[0]
-Y = transpose(loadtxt('chirps.txt'))[1]
+
+
+X = transpose(loadtxt(sys.argv[1]))[0]
+Y = transpose(loadtxt(sys.argv[1]))[1]
 
 Xp  = powers(X,0,1)
 Yp  = powers(Y,1,1)
