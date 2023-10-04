@@ -1,6 +1,3 @@
-
-
-#Done
 def transpose(matrix: list) -> list:
     newlist = []
     if (len(matrix)):
@@ -14,8 +11,6 @@ def transpose(matrix: list) -> list:
         return matrix
 
 
-
-#Done
 def powers(nums: list, start:int, end:int) -> list :
     lis = []
     for e in nums:
@@ -25,12 +20,11 @@ def powers(nums: list, start:int, end:int) -> list :
         lis.append(elist)
     return lis
             
-#Done
 def matmul(m1: list, m2:list) -> list:
   m3 = []
   for e1 in m1:
     tempM = []
-    for e2 in transpose(m2):
+    for e2 in transpose(m2): #Transposing the array makes the next step easier
       sum = 0
       for j in range(len(m2)):
         sum += e1[j]*e2[j]
@@ -39,9 +33,6 @@ def matmul(m1: list, m2:list) -> list:
   return m3
                 
 
-#matrix = [[a,b],
-#          [c,d]]
-#Done
 def invert(m: list) -> list:
     a = m[0][0]
     b = m[0][1]
@@ -52,7 +43,6 @@ def invert(m: list) -> list:
            [-c/det,a/det]]
     return lis
 
-#Done
 def loadtxt(filename:str) -> list:
     matrix = []
     
