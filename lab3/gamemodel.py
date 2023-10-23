@@ -76,7 +76,7 @@ class Player:
     """ Gives the x-distance from this players cannon to a projectile. If the cannon and the projectile touch (assuming the projectile is on the ground and factoring in both cannon and projectile size) this method should return 0"""
     def projectileDistance(self, proj):
         
-        if ((self.getX() - (self.Game.getCannonSize()/2)) <= proj.getX() <= (self.getX()+(self.Game.getCannonSize()/2))):
+        if ((self.getX() - (self.Game.getCannonSize()/2) - self.Game.getBallSize()) <= proj.getX() <= (self.getX()+(self.Game.getCannonSize()/2)+ self.Game.getBallSize())):
             return 0
         else:
             if self.getX() > proj.getX():
